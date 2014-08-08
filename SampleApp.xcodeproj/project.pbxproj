@@ -13,6 +13,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		682CDDA019948613001F2628 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68D7A68B19948596000B67D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68D7A69219948596000B67D4;
+			remoteInfo = SampleApp;
+		};
 		68D7A6A119948596000B67D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 68D7A68B19948596000B67D4 /* Project object */;
@@ -135,6 +142,7 @@
 			);
 			dependencies = (
 				68D7A6A219948596000B67D4 /* PBXTargetDependency */,
+				682CDDA119948613001F2628 /* PBXTargetDependency */,
 			);
 			name = SampleAppTests;
 			productName = SampleAppTests;
@@ -215,6 +223,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		682CDDA119948613001F2628 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68D7A69219948596000B67D4 /* SampleApp */;
+			targetProxy = 682CDDA019948613001F2628 /* PBXContainerItemProxy */;
+		};
 		68D7A6A219948596000B67D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 68D7A69219948596000B67D4 /* SampleApp */;
@@ -377,6 +390,7 @@
 				68D7A6AC19948596000B67D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68D7A6AD19948596000B67D4 /* Build configuration list for PBXNativeTarget "SampleAppTests" */ = {
 			isa = XCConfigurationList;
@@ -385,6 +399,7 @@
 				68D7A6AF19948596000B67D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
