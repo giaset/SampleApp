@@ -25,14 +25,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var home = UIViewController()
         home.title = "Home"
+        home.view.backgroundColor = UIColor.whiteColor()
         var homeNavController = UINavigationController(rootViewController: home)
         
         var videos = UIViewController()
         videos.title = "Videos"
+        videos.view.backgroundColor = UIColor.whiteColor()
         var videosNavController = UINavigationController(rootViewController: videos)
         
         var updates = UIViewController()
         updates.title = "Updates"
+        updates.view.backgroundColor = UIColor.whiteColor()
         var updatesNavController = UINavigationController(rootViewController: updates)
         
         var controllers = NSMutableArray()
@@ -55,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().barTintColor = primaryColor
+        UINavigationBar.appearance().titleTextAttributes = NSDictionary(object: UIColor.whiteColor(), forKey: NSForegroundColorAttributeName)
         
         UITabBar.appearance().translucent = false
         UITabBar.appearance().tintColor = primaryColor
