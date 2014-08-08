@@ -26,17 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var home = UIViewController()
         home.title = "Home"
         var homeNavController = UINavigationController(rootViewController: home)
-        homeNavController.navigationBar.translucent = false
         
         var videos = UIViewController()
         videos.title = "Videos"
         var videosNavController = UINavigationController(rootViewController: videos)
-        videosNavController.navigationBar.translucent = false
         
         var updates = UIViewController()
         updates.title = "Updates"
         var updatesNavController = UINavigationController(rootViewController: updates)
-        updatesNavController.navigationBar.translucent = false
         
         var controllers = NSMutableArray()
         controllers.addObject(homeNavController)
@@ -52,7 +49,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func styleWithColors(#primary: String, secondary: String) {
+        var primaryColor = UIColor(red: 0.086, green: 0.627, blue: 0.522, alpha: 1)
+        
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+        
+        UINavigationBar.appearance().translucent = false
+        UINavigationBar.appearance().barTintColor = primaryColor
+        
+        UITabBar.appearance().translucent = false
+        UITabBar.appearance().tintColor = primaryColor
     }
 
 }
