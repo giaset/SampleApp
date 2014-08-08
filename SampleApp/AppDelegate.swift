@@ -14,11 +14,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        // Override point for customization after application launch.
-        self.window!.backgroundColor = UIColor.whiteColor()
-        self.window!.makeKeyAndVisible()
+        launchApp()
         return true
+    }
+
+    func launchApp() {
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        styleWithColors(primary: "#000000", secondary: "#ffffff")
+        
+        var home = UIViewController()
+        home.title = "Home"
+        var homeNavController = UINavigationController(rootViewController: home)
+        homeNavController.navigationBar.translucent = false
+        
+        var videos = UIViewController()
+        videos.title = "Videos"
+        var videosNavController = UINavigationController(rootViewController: videos)
+        videosNavController.navigationBar.translucent = false
+        
+        var updates = UIViewController()
+        updates.title = "Updates"
+        var updatesNavController = UINavigationController(rootViewController: updates)
+        updatesNavController.navigationBar.translucent = false
+        
+        var controllers = NSMutableArray()
+        controllers.addObject(homeNavController)
+        controllers.addObject(videosNavController)
+        controllers.addObject(updatesNavController)
+        
+        var tabBarController = UITabBarController()
+        tabBarController.viewControllers = controllers
+        
+        self.window!.rootViewController = tabBarController
+        
+        self.window!.makeKeyAndVisible()
+    }
+    
+    func styleWithColors(#primary: String, secondary: String) {
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
     }
 
 }
